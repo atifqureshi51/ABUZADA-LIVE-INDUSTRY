@@ -1,130 +1,325 @@
-/* =========================
-   CONTACT TEAM
-========================= */
+/* =========================================
+   ABUZADA TEAM CONTACT - FINAL
+========================================= */
+
+.cta-section {
+  width: 100%;
+  padding: 90px 20px;
+  overflow: hidden;
+}
+
+.cta-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-badge {
+  display: inline-block;
+  padding: 7px 18px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 45, 180, .55);
+  border-radius: 50px;
+  color: #ff4fc3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.cta-content h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.1;
+  color: #fff;
+}
+
+.cta-content h2 span {
+  color: #16e889;
+}
+
+.cta-content > p {
+  max-width: 650px;
+  margin: 18px auto 40px;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* THREE CONTACT CARDS */
 
 .contact-buttons {
   width: 100%;
-  max-width: 1200px;
-  margin: 35px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
 }
 
-.whatsapp {
+
+/* CARD */
+
+.team-contact {
   position: relative;
-  min-height: 180px;
-  padding: 25px 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-decoration: none;
-  color: #fff;
-  background: linear-gradient(145deg, #10101c, #070711);
-  border: 1px solid rgba(255, 0, 180, 0.35);
-  border-radius: 22px;
-  overflow: hidden;
-  transition: 0.35s ease;
+  min-width: 0;
+  min-height: 175px;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+
+  padding: 22px !important;
+  gap: 20px !important;
+
+  text-decoration: none !important;
+  text-align: left !important;
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 0, 180, .12),
+      transparent 45%
+    ),
+    #080b16 !important;
+
+  border: 1px solid rgba(255, 255, 255, .10) !important;
+  border-radius: 22px !important;
+
+  box-sizing: border-box !important;
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease !important;
 }
 
-.whatsapp:hover {
-  transform: translateY(-8px);
-  border-color: #ff2bb5;
-  box-shadow: 0 0 35px rgba(255, 0, 180, 0.3);
+.team-contact:hover {
+  transform: translateY(-7px);
 }
 
-.whatsapp img {
-  width: 105px;
-  height: 105px;
-  min-width: 105px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ff2bb5;
-  box-shadow: 0 0 22px rgba(255, 0, 180, 0.65);
+
+/* PROFILE CIRCLE */
+
+.profile-wrap {
+  flex: 0 0 115px !important;
+  width: 115px !important;
+  height: 115px !important;
+
+  padding: 4px !important;
+
+  border-radius: 50% !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
 }
 
-.whatsapp.snow img {
-  border-color: #8b35ff;
-  box-shadow: 0 0 22px rgba(139, 53, 255, 0.65);
+.profile-wrap img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+
+  object-fit: cover !important;
+
+  border-radius: 50% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.whatsapp.peter img {
-  border-color: #168cff;
-  box-shadow: 0 0 22px rgba(22, 140, 255, 0.65);
+
+/* ABUZADA */
+
+.team-contact.abuzada {
+  border-color: rgba(255, 50, 190, .35) !important;
 }
+
+.team-contact.abuzada .profile-wrap {
+  border: 3px solid #ff35bd;
+  box-shadow:
+    0 0 15px rgba(255, 35, 190, .6),
+    0 0 35px rgba(255, 35, 190, .25);
+}
+
+.team-contact.abuzada:hover {
+  border-color: #ff35bd !important;
+  box-shadow: 0 0 30px rgba(255, 35, 190, .20);
+}
+
+
+/* SNOW */
+
+.team-contact.snow {
+  border-color: rgba(140, 55, 255, .35) !important;
+}
+
+.team-contact.snow .profile-wrap {
+  border: 3px solid #8c38ff;
+  box-shadow:
+    0 0 15px rgba(140, 55, 255, .6),
+    0 0 35px rgba(140, 55, 255, .25);
+}
+
+.team-contact.snow:hover {
+  border-color: #8c38ff !important;
+  box-shadow: 0 0 30px rgba(140, 55, 255, .20);
+}
+
+
+/* PETER */
+
+.team-contact.peter {
+  border-color: rgba(20, 130, 255, .35) !important;
+}
+
+.team-contact.peter .profile-wrap {
+  border: 3px solid #168cff;
+  box-shadow:
+    0 0 15px rgba(22, 140, 255, .6),
+    0 0 35px rgba(22, 140, 255, .25);
+}
+
+.team-contact.peter:hover {
+  border-color: #168cff !important;
+  box-shadow: 0 0 30px rgba(22, 140, 255, .20);
+}
+
+
+/* TEXT */
 
 .contact-info {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
+}
+
+.contact-info h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #fff !important;
+
+  font-size: 22px !important;
+  font-weight: 800 !important;
+}
+
+.abuzada .contact-info h3 {
+  color: #ff35bd !important;
+}
+
+.snow .contact-info h3 {
+  color: #9a55ff !important;
+}
+
+.peter .contact-info h3 {
+  color: #2495ff !important;
+}
+
+.contact-info .phone {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .contact-info span {
-  font-size: 13px;
-  color: #00ff91;
-  font-weight: 700;
-}
-
-.contact-info strong {
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.contact-info small {
   color: #aaa;
-  font-size: 14px;
+  font-size: 13px;
 }
+
+
+/* ARROW */
 
 .contact-arrow {
   position: absolute;
+
   right: 18px;
   bottom: 18px;
+
   width: 42px;
   height: 42px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ff249f;
-  font-size: 20px;
-  font-weight: bold;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+
+  color: #fff !important;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  background: #ff269f;
+
+  box-shadow: 0 0 18px rgba(255, 38, 159, .55);
 }
 
 .snow .contact-arrow {
-  background: #8030ff;
+  background: #8235ff;
+  box-shadow: 0 0 18px rgba(130, 53, 255, .55);
 }
 
 .peter .contact-arrow {
   background: #168cff;
+  box-shadow: 0 0 18px rgba(22, 140, 255, .55);
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+
   .contact-buttons {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .whatsapp {
-    min-height: 140px;
-  }
 }
+
 
 @media (max-width: 500px) {
-  .whatsapp {
-    padding: 18px;
+
+  .cta-section {
+    padding: 65px 15px;
   }
 
-  .whatsapp img {
-    width: 80px;
-    height: 80px;
-    min-width: 80px;
+  .team-contact {
+    min-height: 135px;
+    padding: 15px !important;
+    gap: 14px !important;
   }
 
-  .contact-info strong {
-    font-size: 17px;
+  .profile-wrap {
+    flex-basis: 85px !important;
+    width: 85px !important;
+    height: 85px !important;
   }
+
+  .contact-info h3 {
+    font-size: 18px !important;
+  }
+
+  .contact-info .phone {
+    font-size: 14px;
+  }
+
+  .contact-arrow {
+    width: 36px;
+    height: 36px;
+    right: 12px;
+    bottom: 12px;
+  }
+
 }

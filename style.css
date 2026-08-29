@@ -1,778 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* =========================
+   CONTACT TEAM
+========================= */
 
-:root{
-  --bg:#05030b;
-  --bg2:#090611;
-  --card:#100b1c;
-  --text:#ffffff;
-  --muted:#aaa4b8;
-  --pink:#ff239d;
-  --pink2:#ff4fbc;
-  --purple:#7b2cff;
-  --blue:#168cff;
-  --green:#20e98a;
-  --border:rgba(255,255,255,.12);
-  --shadow:0 0 35px rgba(255,20,155,.18);
+.contact-buttons {
+  width: 100%;
+  max-width: 1200px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+.whatsapp {
+  position: relative;
+  min-height: 180px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(145deg, #10101c, #070711);
+  border: 1px solid rgba(255, 0, 180, 0.35);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: 0.35s ease;
 }
 
-html{
-  scroll-behavior:smooth;
+.whatsapp:hover {
+  transform: translateY(-8px);
+  border-color: #ff2bb5;
+  box-shadow: 0 0 35px rgba(255, 0, 180, 0.3);
 }
 
-body{
-  background:
-    radial-gradient(circle at 75% 12%,rgba(123,44,255,.16),transparent 28%),
-    radial-gradient(circle at 15% 35%,rgba(255,35,157,.10),transparent 25%),
-    var(--bg);
-  color:var(--text);
-  font-family:'Inter',sans-serif;
-  overflow-x:hidden;
+.whatsapp img {
+  width: 105px;
+  height: 105px;
+  min-width: 105px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff2bb5;
+  box-shadow: 0 0 22px rgba(255, 0, 180, 0.65);
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-  background-size:50px 50px;
-  mask-image:linear-gradient(to bottom,black,transparent 85%);
-  z-index:-1;
+.whatsapp.snow img {
+  border-color: #8b35ff;
+  box-shadow: 0 0 22px rgba(139, 53, 255, 0.65);
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+.whatsapp.peter img {
+  border-color: #168cff;
+  box-shadow: 0 0 22px rgba(22, 140, 255, 0.65);
 }
 
-.container{
-  width:min(1180px,92%);
-  margin:auto;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  height:72px;
-  background:rgba(5,3,11,.82);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.09);
-}
-
-.nav-inner{
-  height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-
-.logo{
-  font-size:25px;
-  font-weight:900;
-  letter-spacing:-1px;
-  color:white;
-}
-
-.logo span{
-  color:var(--pink);
-  text-shadow:0 0 18px rgba(255,35,157,.7);
-}
-
-nav{
-  display:flex;
-  align-items:center;
-  gap:30px;
-}
-
-nav a{
-  color:#bbb5c8;
-  font-size:13px;
-  font-weight:600;
-  transition:.25s;
-}
-
-nav a:hover{
-  color:white;
-  text-shadow:0 0 15px var(--pink);
-}
-
-.nav-btn{
-  padding:12px 21px;
-  border:1px solid var(--pink);
-  border-radius:12px;
-  font-size:13px;
-  font-weight:700;
-  background:linear-gradient(135deg,rgba(255,35,157,.18),rgba(123,44,255,.15));
-  box-shadow:0 0 20px rgba(255,35,157,.22);
-  transition:.25s;
-}
-
-.nav-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 30px rgba(255,35,157,.5);
-}
-
-.menu-btn{
-  display:none;
-  border:1px solid var(--border);
-  background:#100b19;
-  color:white;
-  width:42px;
-  height:42px;
-  border-radius:10px;
-  font-size:22px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-  min-height:680px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:650px;
-  height:650px;
-  right:-180px;
-  top:-120px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(255,35,157,.28),transparent 65%);
-  filter:blur(20px);
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  left:-220px;
-  bottom:-250px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(123,44,255,.22),transparent 65%);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  padding:90px 0;
-}
-
-.badge,
-.cta-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:7px 13px;
-  border:1px solid rgba(255,35,157,.45);
-  border-radius:50px;
-  background:rgba(255,35,157,.08);
-  color:#ff6dc3;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1.5px;
-  box-shadow:0 0 20px rgba(255,35,157,.1);
-}
-
-.pulse{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#ff3150;
-  box-shadow:0 0 12px #ff3150;
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  50%{transform:scale(1.5);opacity:.5}
-}
-
-.hero h1{
-  max-width:750px;
-  margin:24px 0 20px;
-  font-size:clamp(48px,7vw,82px);
-  line-height:1.02;
-  letter-spacing:-4px;
-  font-weight:900;
-}
-
-.hero h1 span{
-  background:linear-gradient(90deg,#ff3eaa,#8b45ff,#168cff);
-  -webkit-background-clip:text;
-  color:transparent;
-  filter:drop-shadow(0 0 20px rgba(255,35,157,.22));
-}
-
-.hero p{
-  max-width:650px;
-  color:#aaa4b5;
-  font-size:17px;
-  line-height:1.8;
-}
-
-.hero p strong{
-  color:white;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:14px;
-  margin-top:32px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:52px;
-  padding:0 26px;
-  border-radius:13px;
-  font-weight:800;
-  font-size:14px;
-  transition:.3s;
-}
-
-.btn.primary{
-  background:linear-gradient(100deg,#ff168e,#9b32ff);
-  box-shadow:0 0 28px rgba(255,35,157,.35);
-}
-
-.btn.primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 0 42px rgba(255,35,157,.55);
-}
-
-.btn.secondary{
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(255,255,255,.035);
-  color:#ddd7e5;
-}
-
-.btn.secondary:hover{
-  border-color:var(--pink);
-  color:white;
-}
-
-.hero-stats{
-  display:flex;
-  gap:12px;
-  margin-top:55px;
-  flex-wrap:wrap;
-}
-
-.hero-stats > div{
-  min-width:180px;
-  padding:16px 20px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:15px;
-  background:rgba(255,255,255,.035);
-  box-shadow:inset 0 0 30px rgba(255,255,255,.015);
-}
-
-.hero-stats strong{
-  display:block;
-  font-size:21px;
-}
-
-.hero-stats span{
-  display:block;
-  margin-top:4px;
-  color:#8f899c;
-  font-size:11px;
-}
-
-/* ================= SECTIONS ================= */
-
-.section{
-  padding:110px 0;
-  position:relative;
-}
-
-.section-heading{
-  max-width:600px;
-  margin-bottom:50px;
-}
-
-.section-heading > span,
-.eyebrow{
-  color:#ff53ba;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.section-heading h2{
-  margin-top:13px;
-  font-size:45px;
-  line-height:1.1;
-  letter-spacing:-2px;
-}
-
-.section-heading h2 strong{
-  color:#fff;
-}
-
-.section-heading p{
-  margin-top:17px;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-.section-heading.center{
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* ================= WORK ================= */
-
-.work-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:22px;
-}
-
-.work-card{
-  position:relative;
-  padding:38px;
-  min-height:300px;
-  border:1px solid rgba(255,35,157,.35);
-  border-radius:22px;
-  background:
-    radial-gradient(circle at 85% 10%,rgba(255,35,157,.12),transparent 35%),
-    var(--card);
-  overflow:hidden;
-  transition:.35s;
-}
-
-.work-card.featured{
-  border-color:rgba(123,44,255,.5);
-  background:
-    radial-gradient(circle at 85% 10%,rgba(123,44,255,.18),transparent 35%),
-    var(--card);
-}
-
-.work-card:hover{
-  transform:translateY(-7px);
-  box-shadow:var(--shadow);
-}
-
-.number{
-  position:absolute;
-  top:20px;
-  right:25px;
-  color:#5d5669;
-  font-weight:900;
-  font-size:12px;
-}
-
-.icon{
-  width:64px;
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:18px;
-  background:linear-gradient(135deg,#ff2098,#862fff);
-  font-size:30px;
-  box-shadow:0 0 30px rgba(255,35,157,.3);
-}
-
-.work-card h3{
-  margin-top:25px;
-  font-size:25px;
-}
-
-.work-card p{
-  margin:12px 0 25px;
-  color:#9790a3;
-  line-height:1.65;
-  font-size:14px;
-}
-
-.work-card a{
-  color:#ff50b8;
-  font-size:13px;
-  font-weight:800;
-}
-
-.work-card.featured a{
-  color:#a56cff;
-}
-
-/* ================= EARNINGS ================= */
-
-.earnings-section{
-  padding:50px 0;
-}
-
-.earnings-box{
-  min-height:300px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:50px;
-  padding:55px;
-  border:1px solid rgba(255,35,157,.3);
-  border-radius:25px;
-  background:
-    radial-gradient(circle at 10% 50%,rgba(255,35,157,.16),transparent 40%),
-    radial-gradient(circle at 90% 20%,rgba(123,44,255,.15),transparent 35%),
-    #0d0815;
-  box-shadow:0 0 45px rgba(255,35,157,.08);
-}
-
-.earnings-box h2{
-  margin-top:13px;
-  font-size:42px;
-  line-height:1.05;
-  letter-spacing:-2px;
-}
-
-.earnings-box h2 span{
-  color:#ff45ae;
-}
-
-.earnings-box p{
-  max-width:600px;
-  margin-top:18px;
-  color:#96909f;
-  line-height:1.7;
-  font-size:14px;
-}
-
-.earning-number{
-  min-width:340px;
-  text-align:center;
-}
-
-.earning-number small{
-  display:block;
-  color:#9a94a4;
-  font-size:12px;
-}
-
-.earning-number strong{
-  display:block;
-  margin-top:8px;
-  font-size:52px;
-  letter-spacing:-3px;
-  background:linear-gradient(90deg,#ff3aa7,#a63dff);
-  -webkit-background-clip:text;
-  color:transparent;
-  text-shadow:0 0 30px rgba(255,35,157,.2);
-}
-
-.earning-number span{
-  color:#aaa3b3;
-  font-size:13px;
-}
-
-/* ================= REQUIREMENTS ================= */
-
-.requirements-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.requirement{
-  padding:35px 25px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:20px;
-  background:rgba(255,255,255,.025);
-  transition:.3s;
-}
-
-.requirement:hover{
-  transform:translateY(-5px);
-  border-color:rgba(123,44,255,.5);
-  box-shadow:0 0 30px rgba(123,44,255,.12);
-}
-
-.req-icon{
-  width:75px;
-  height:75px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:20px;
-  background:rgba(123,44,255,.12);
-  border:1px solid rgba(123,44,255,.35);
-  font-size:35px;
-  box-shadow:0 0 25px rgba(123,44,255,.15);
-}
-
-.requirement h3{
-  margin-top:22px;
-  font-size:18px;
-}
-
-.requirement p{
-  margin-top:10px;
-  color:#918b9b;
-  font-size:13px;
-  line-height:1.6;
-}
-
-/* ================= CTA ================= */
-
-.cta-section{
-  padding:110px 0 120px;
-  border-top:1px solid rgba(255,255,255,.06);
-  background:
-    radial-gradient(circle at 50% 80%,rgba(255,35,157,.11),transparent 45%);
+.contact-info span {
+  font-size: 13px;
+  color: #00ff91;
+  font-weight: 700;
 }
-
-.cta-content{
-  text-align:center;
-}
-
-.cta-content h2{
-  margin-top:20px;
-  font-size:48px;
-  line-height:1.08;
-  letter-spacing:-2px;
-}
-
-.cta-content h2 span{
-  background:linear-gradient(90deg,#ff3ba9,#933cff,#168cff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.cta-content > p{
-  margin:17px auto 38px;
-  max-width:600px;
-  color:#96909f;
-  font-size:14px;
-  line-height:1.7;
-}
-
-.contact-buttons{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  max-width:850px;
-  margin:auto;
-}
-
-.whatsapp{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  padding:27px;
-  border-radius:20px;
-  border:1px solid rgba(32,233,138,.25);
-  background:linear-gradient(135deg,rgba(32,233,138,.07),rgba(255,255,255,.025));
-  text-align:left;
-  transition:.3s;
-}
-
-.whatsapp:hover{
-  transform:translateY(-5px);
-  border-color:rgba(32,233,138,.65);
-  box-shadow:0 0 30px rgba(32,233,138,.12);
-}
-
-.whatsapp span{
-  color:#20e98a;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.whatsapp strong{
-  margin-top:8px;
-  font-size:17px;
-}
-
-/* ================= FOOTER ================= */
 
-footer{
-  padding:30px 0;
-  border-top:1px solid rgba(255,255,255,.08);
-  background:#030207;
+.contact-info strong {
+  font-size: 21px;
+  font-weight: 800;
 }
 
-.footer-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+.contact-info small {
+  color: #aaa;
+  font-size: 14px;
 }
 
-.footer-inner p{
-  color:#6f6978;
-  font-size:11px;
+.contact-arrow {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff249f;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.footer-inner > a{
-  color:#9d96a8;
-  font-size:11px;
+.snow .contact-arrow {
+  background: #8030ff;
 }
 
-.footer-inner > a:hover{
-  color:#ff48b1;
+.peter .contact-arrow {
+  background: #168cff;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:850px){
+/* =========================
+   MOBILE
+========================= */
 
-  .navbar{
-    height:65px;
+@media (max-width: 900px) {
+  .contact-buttons {
+    grid-template-columns: 1fr;
   }
 
-  .nav-inner{
-    height:65px;
-  }
-
-  nav{
-    position:absolute;
-    top:65px;
-    left:0;
-    width:100%;
-    padding:20px;
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:18px;
-    background:rgba(5,3,11,.97);
-    border-bottom:1px solid rgba(255,255,255,.1);
-  }
-
-  nav.active{
-    display:flex;
-  }
-
-  .nav-btn{
-    display:none;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .hero{
-    min-height:auto;
-  }
-
-  .hero-content{
-    padding:75px 0;
-  }
-
-  .hero h1{
-    font-size:48px;
-    letter-spacing:-2.5px;
-  }
-
-  .hero p{
-    font-size:15px;
-  }
-
-  .hero-stats{
-    display:grid;
-    grid-template-columns:1fr;
-  }
-
-  .hero-stats > div{
-    width:100%;
-  }
-
-  .section{
-    padding:75px 0;
-  }
-
-  .section-heading h2{
-    font-size:36px;
-  }
-
-  .work-grid{
-    grid-template-columns:1fr;
-  }
-
-  .earnings-box{
-    flex-direction:column;
-    align-items:flex-start;
-    padding:35px 25px;
-  }
-
-  .earning-number{
-    min-width:0;
-    width:100%;
-    text-align:left;
-  }
-
-  .earning-number strong{
-    font-size:42px;
-  }
-
-  .requirements-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-buttons{
-    grid-template-columns:1fr;
-  }
-
-  .cta-content h2{
-    font-size:38px;
-  }
-
-  .footer-inner{
-    flex-direction:column;
-    text-align:center;
+  .whatsapp {
+    min-height: 140px;
   }
 }
 
-@media(max-width:480px){
-
-  .container{
-    width:90%;
+@media (max-width: 500px) {
+  .whatsapp {
+    padding: 18px;
   }
 
-  .hero h1{
-    font-size:40px;
+  .whatsapp img {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
   }
 
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .work-card{
-    padding:27px;
-  }
-
-  .earnings-box h2{
-    font-size:34px;
-  }
-
-  .cta-content h2{
-    font-size:32px;
+  .contact-info strong {
+    font-size: 17px;
   }
 }

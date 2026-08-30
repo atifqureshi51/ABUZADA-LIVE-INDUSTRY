@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --bg: #05030a;
   --card: #0d0915;
   --white: #ffffff;
-  --muted: #9d96a8;
+  --muted: #9992a5;
+
   --pink: #ff249f;
   --purple: #8b35ff;
   --blue: #168cff;
-  --green: #20e98a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -23,12 +21,22 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 80% 10%, rgba(139,53,255,.16), transparent 30%),
-    radial-gradient(circle at 10% 40%, rgba(255,36,159,.10), transparent 28%),
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(139, 53, 255, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 5% 40%,
+      rgba(255, 36, 159, 0.10),
+      transparent 30%
+    ),
     var(--bg);
 
   color: var(--white);
-  font-family: 'Inter', sans-serif;
+
+  font-family: "Inter", sans-serif;
+
   overflow-x: hidden;
 }
 
@@ -43,55 +51,71 @@ a {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
   position: sticky;
+
   top: 0;
-  z-index: 1000;
+
+  z-index: 999;
 
   height: 72px;
 
-  background: rgba(5,3,10,.90);
+  background: rgba(5, 3, 10, 0.92);
+
   backdrop-filter: blur(18px);
 
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-inner {
   height: 72px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
 .logo {
   font-size: 25px;
+
   font-weight: 900;
+
   letter-spacing: -1px;
 }
 
 .logo span {
   color: var(--pink);
-  text-shadow: 0 0 20px rgba(255,36,159,.6);
+
+  text-shadow:
+    0 0 20px rgba(255,36,159,0.6);
 }
 
 nav {
   display: flex;
+
   align-items: center;
+
   gap: 30px;
 }
 
 nav a {
   color: #aaa4b4;
+
   font-size: 13px;
+
   font-weight: 600;
-  transition: .25s;
+
+  transition: 0.25s;
 }
 
 nav a:hover {
-  color: #fff;
+  color: white;
 }
 
 .nav-btn {
@@ -101,12 +125,14 @@ nav a:hover {
 
   border: 1px solid var(--pink);
 
-  background: rgba(255,36,159,.10);
+  background: rgba(255,36,159,0.10);
 
   font-size: 13px;
+
   font-weight: 800;
 
-  box-shadow: 0 0 20px rgba(255,36,159,.15);
+  box-shadow:
+    0 0 20px rgba(255,36,159,0.15);
 }
 
 .menu-btn {
@@ -115,17 +141,21 @@ nav a:hover {
   width: 42px;
   height: 42px;
 
-  border: 1px solid rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,0.12);
+
   border-radius: 10px;
 
   background: #100b18;
+
   color: white;
 
-  font-size: 21px;
+  font-size: 20px;
 }
 
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   position: relative;
@@ -133,6 +163,7 @@ nav a:hover {
   min-height: 680px;
 
   display: flex;
+
   align-items: center;
 
   overflow: hidden;
@@ -146,15 +177,15 @@ nav a:hover {
   width: 650px;
   height: 650px;
 
-  right: -220px;
-  top: -150px;
+  right: -250px;
+  top: -200px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(255,36,159,.25),
+      rgba(255,36,159,0.25),
       transparent 65%
     );
 
@@ -177,13 +208,14 @@ nav a:hover {
   background:
     radial-gradient(
       circle,
-      rgba(139,53,255,.20),
+      rgba(139,53,255,0.22),
       transparent 65%
     );
 }
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   padding: 90px 0;
@@ -192,20 +224,23 @@ nav a:hover {
 .badge,
 .cta-badge {
   display: inline-flex;
+
   align-items: center;
+
   gap: 8px;
 
   padding: 8px 14px;
 
   border-radius: 50px;
 
-  border: 1px solid rgba(255,36,159,.45);
+  border: 1px solid rgba(255,36,159,0.45);
 
-  background: rgba(255,36,159,.07);
+  background: rgba(255,36,159,0.07);
 
   color: #ff62bd;
 
   font-size: 11px;
+
   font-weight: 800;
 
   letter-spacing: 1.5px;
@@ -219,11 +254,12 @@ nav a:hover {
 
   background: #ff3150;
 
-  box-shadow: 0 0 12px #ff3150;
+  box-shadow:
+    0 0 12px #ff3150;
 }
 
 .hero h1 {
-  max-width: 800px;
+  max-width: 850px;
 
   margin: 25px 0 20px;
 
@@ -247,6 +283,8 @@ nav a:hover {
 
   -webkit-background-clip: text;
 
+  background-clip: text;
+
   color: transparent;
 }
 
@@ -261,11 +299,12 @@ nav a:hover {
 }
 
 .hero p strong {
-  color: #fff;
+  color: white;
 }
 
 .hero-buttons {
   display: flex;
+
   gap: 14px;
 
   margin-top: 32px;
@@ -279,15 +318,18 @@ nav a:hover {
   padding: 0 26px;
 
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 13px;
 
   font-size: 14px;
+
   font-weight: 800;
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .btn.primary {
@@ -299,20 +341,20 @@ nav a:hover {
     );
 
   box-shadow:
-    0 0 30px rgba(255,36,159,.30);
+    0 0 30px rgba(255,36,159,0.30);
 }
 
 .btn.primary:hover {
   transform: translateY(-3px);
 
   box-shadow:
-    0 0 42px rgba(255,36,159,.50);
+    0 0 42px rgba(255,36,159,0.50);
 }
 
 .btn.secondary {
-  border: 1px solid rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,0.13);
 
-  background: rgba(255,255,255,.035);
+  background: rgba(255,255,255,0.035);
 }
 
 .btn.secondary:hover {
@@ -321,6 +363,7 @@ nav a:hover {
 
 .hero-stats {
   display: flex;
+
   gap: 12px;
 
   margin-top: 55px;
@@ -333,11 +376,11 @@ nav a:hover {
 
   padding: 17px 20px;
 
-  border: 1px solid rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,0.09);
 
   border-radius: 15px;
 
-  background: rgba(255,255,255,.025);
+  background: rgba(255,255,255,0.025);
 }
 
 .hero-stats strong {
@@ -357,14 +400,16 @@ nav a:hover {
 }
 
 
-/* ================= SECTIONS ================= */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
   padding: 110px 0;
 }
 
 .section-heading {
-  max-width: 620px;
+  max-width: 650px;
 
   margin-bottom: 50px;
 }
@@ -374,6 +419,7 @@ nav a:hover {
   color: #ff53ba;
 
   font-size: 11px;
+
   font-weight: 900;
 
   letter-spacing: 2px;
@@ -401,11 +447,14 @@ nav a:hover {
   text-align: center;
 
   margin-left: auto;
+
   margin-right: auto;
 }
 
 
-/* ================= PLATFORMS ================= */
+/* =========================
+   PLATFORMS
+========================= */
 
 .platform-grid {
   display: grid;
@@ -428,9 +477,9 @@ nav a:hover {
 
   background: var(--card);
 
-  border: 1px solid rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,0.10);
 
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .platform-card:hover {
@@ -438,24 +487,24 @@ nav a:hover {
 }
 
 .platform-card.poppo {
-  border-color: rgba(255,36,159,.35);
+  border-color: rgba(255,36,159,0.35);
 
   background:
     radial-gradient(
       circle at 90% 10%,
-      rgba(255,36,159,.14),
+      rgba(255,36,159,0.14),
       transparent 35%
     ),
     var(--card);
 }
 
 .platform-card.crush {
-  border-color: rgba(139,53,255,.38);
+  border-color: rgba(139,53,255,0.38);
 
   background:
     radial-gradient(
       circle at 90% 10%,
-      rgba(139,53,255,.16),
+      rgba(139,53,255,0.16),
       transparent 35%
     ),
     var(--card);
@@ -474,7 +523,9 @@ nav a:hover {
   height: 65px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   border-radius: 18px;
@@ -491,7 +542,7 @@ nav a:hover {
   font-weight: 900;
 
   box-shadow:
-    0 0 28px rgba(255,36,159,.25);
+    0 0 28px rgba(255,36,159,0.25);
 }
 
 .crush .platform-icon {
@@ -542,7 +593,9 @@ nav a:hover {
 }
 
 
-/* ================= EARNINGS ================= */
+/* =========================
+   EARNINGS
+========================= */
 
 .earnings-section {
   padding: 50px 0;
@@ -563,17 +616,17 @@ nav a:hover {
 
   border-radius: 25px;
 
-  border: 1px solid rgba(255,36,159,.28);
+  border: 1px solid rgba(255,36,159,0.28);
 
   background:
     radial-gradient(
       circle at 10% 50%,
-      rgba(255,36,159,.15),
+      rgba(255,36,159,0.15),
       transparent 40%
     ),
     radial-gradient(
       circle at 90% 20%,
-      rgba(139,53,255,.15),
+      rgba(139,53,255,0.15),
       transparent 35%
     ),
     #0d0815;
@@ -633,6 +686,8 @@ nav a:hover {
 
   -webkit-background-clip: text;
 
+  background-clip: text;
+
   color: transparent;
 }
 
@@ -643,7 +698,9 @@ nav a:hover {
 }
 
 
-/* ================= REQUIREMENTS ================= */
+/* =========================
+   REQUIREMENTS
+========================= */
 
 .requirements-grid {
   display: grid;
@@ -660,17 +717,17 @@ nav a:hover {
 
   border-radius: 20px;
 
-  border: 1px solid rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,0.09);
 
-  background: rgba(255,255,255,.025);
+  background: rgba(255,255,255,0.025);
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .requirement:hover {
   transform: translateY(-5px);
 
-  border-color: rgba(139,53,255,.5);
+  border-color: rgba(139,53,255,0.5);
 }
 
 .req-icon {
@@ -682,13 +739,14 @@ nav a:hover {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 20px;
 
-  background: rgba(139,53,255,.10);
+  background: rgba(139,53,255,0.10);
 
-  border: 1px solid rgba(139,53,255,.30);
+  border: 1px solid rgba(139,53,255,0.30);
 
   font-size: 34px;
 }
@@ -708,17 +766,19 @@ nav a:hover {
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section {
   padding: 110px 0 120px;
 
-  border-top: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(255,255,255,0.06);
 
   background:
     radial-gradient(
       circle at 50% 80%,
-      rgba(255,36,159,.10),
+      rgba(255,36,159,0.10),
       transparent 45%
     );
 }
@@ -748,6 +808,8 @@ nav a:hover {
 
   -webkit-background-clip: text;
 
+  background-clip: text;
+
   color: transparent;
 }
 
@@ -764,7 +826,9 @@ nav a:hover {
 }
 
 
-/* ================= TEAM ================= */
+/* =========================
+   TEAM CARDS
+========================= */
 
 .team-grid {
   width: 100%;
@@ -800,11 +864,11 @@ nav a:hover {
       #080710
     );
 
-  border: 1px solid rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,0.10);
 
   overflow: hidden;
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .team-card:hover {
@@ -812,7 +876,7 @@ nav a:hover {
 }
 
 
-/* LETTER */
+/* CIRCLE */
 
 .team-symbol {
   width: 82px;
@@ -823,6 +887,7 @@ nav a:hover {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
@@ -831,14 +896,14 @@ nav a:hover {
 
   font-weight: 900;
 
-  background: rgba(255,255,255,.04);
+  background: rgba(255,255,255,0.04);
 }
 
 
 /* ABUZADA */
 
 .team-card.abuzada {
-  border-color: rgba(255,36,159,.35);
+  border-color: rgba(255,36,159,0.35);
 }
 
 .abuzada .team-symbol {
@@ -847,14 +912,14 @@ nav a:hover {
   border: 3px solid #ff35b4;
 
   box-shadow:
-    0 0 25px rgba(255,36,159,.35);
+    0 0 25px rgba(255,36,159,0.35);
 }
 
 
 /* SNOW */
 
 .team-card.snow {
-  border-color: rgba(139,53,255,.35);
+  border-color: rgba(139,53,255,0.35);
 }
 
 .snow .team-symbol {
@@ -863,14 +928,14 @@ nav a:hover {
   border: 3px solid #8b35ff;
 
   box-shadow:
-    0 0 25px rgba(139,53,255,.35);
+    0 0 25px rgba(139,53,255,0.35);
 }
 
 
 /* PETER */
 
 .team-card.peter {
-  border-color: rgba(22,140,255,.35);
+  border-color: rgba(22,140,255,0.35);
 }
 
 .peter .team-symbol {
@@ -879,7 +944,7 @@ nav a:hover {
   border: 3px solid #168cff;
 
   box-shadow:
-    0 0 25px rgba(22,140,255,.35);
+    0 0 25px rgba(22,140,255,0.35);
 }
 
 
@@ -916,6 +981,7 @@ nav a:hover {
   position: absolute;
 
   right: 16px;
+
   bottom: 16px;
 
   width: 40px;
@@ -924,6 +990,7 @@ nav a:hover {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   border-radius: 50%;
@@ -937,32 +1004,34 @@ nav a:hover {
   background: var(--pink);
 
   box-shadow:
-    0 0 20px rgba(255,36,159,.45);
+    0 0 20px rgba(255,36,159,0.45);
 }
 
 .snow .team-arrow {
   background: var(--purple);
 
   box-shadow:
-    0 0 20px rgba(139,53,255,.45);
+    0 0 20px rgba(139,53,255,0.45);
 }
 
 .peter .team-arrow {
   background: var(--blue);
 
   box-shadow:
-    0 0 20px rgba(22,140,255,.45);
+    0 0 20px rgba(22,140,255,0.45);
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   padding: 30px 0;
 
   background: #030207;
 
-  border-top: 1px solid rgba(255,255,255,.07);
+  border-top: 1px solid rgba(255,255,255,0.07);
 }
 
 .footer-inner {
@@ -988,7 +1057,9 @@ footer {
 }
 
 
-/* ================= TABLET ================= */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
 
@@ -998,6 +1069,7 @@ footer {
     position: absolute;
 
     top: 72px;
+
     left: 0;
 
     width: 100%;
@@ -1012,7 +1084,7 @@ footer {
 
     background: #07050d;
 
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
   nav.active {
@@ -1055,7 +1127,9 @@ footer {
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 

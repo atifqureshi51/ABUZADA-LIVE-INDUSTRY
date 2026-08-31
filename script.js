@@ -1,89 +1,77 @@
-// ================================
-// MOBILE MENU
-// ================================
+document.addEventListener("DOMContentLoaded", function () {
 
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
 
-  if (nav) {
-    nav.classList.toggle("active");
-  }
-}
+  /* MOBILE MENU */
 
+  if (menuBtn && navMenu) {
 
-// Close mobile menu after clicking a link
+    menuBtn.addEventListener("click", function () {
 
-const navLinks = document.querySelectorAll("#navMenu a");
+      navMenu.classList.toggle("active");
 
-navLinks.forEach(function(link) {
+    });
 
-  link.addEventListener("click", function() {
-
-    const nav = document.getElementById("navMenu");
-
-    if (nav) {
-      nav.classList.remove("active");
-    }
-
-  });
-
-});
-
-
-// ================================
-// CLOSE MENU WHEN CLICKING OUTSIDE
-// ================================
-
-document.addEventListener("click", function(event) {
-
-  const nav = document.getElementById("navMenu");
-  const menuButton = document.querySelector(".menu-btn");
-
-  if (!nav || !menuButton) {
-    return;
   }
 
-  if (
-    nav.classList.contains("active") &&
-    !nav.contains(event.target) &&
-    !menuButton.contains(event.target)
-  ) {
-    nav.classList.remove("active");
-  }
 
-});
+  /* CLOSE MENU AFTER CLICK */
 
+  document.querySelectorAll("#navMenu a").forEach(function (link) {
 
-// ================================
-// SCROLL REVEAL
-// ================================
+    link.addEventListener("click", function () {
 
-const revealItems = document.querySelectorAll(
-  ".platform, .person-card, .requirement, .earnings-box"
-);
-
-const observer = new IntersectionObserver(
-  function(entries) {
-
-    entries.forEach(function(entry) {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("show");
-
-        observer.unobserve(entry.target);
-
+      if (navMenu) {
+        navMenu.classList.remove("active");
       }
 
     });
 
-  },
-  {
-    threshold: 0.12
-  }
-);
+  });
 
-revealItems.forEach(function(item) {
-  item.classList.add("reveal");
-  observer.observe(item);
+
+  /* CARD PRESS EFFECT */
+
+  document.querySelectorAll(".team-card, .platform-box").forEach(function (card) {
+
+    card.addEventListener("mousedown", function () {
+
+      card.style.transform = "scale(0.985)";
+
+    });
+
+    card.addEventListener("mouseup", function () {
+
+      card.style.transform = "";
+
+    });
+
+    card.addEventListener("mouseleave", function () {
+
+      card.style.transform = "";
+
+    });
+
+  });
+
+
+  /* IMAGE FALLBACK */
+
+  document.querySelectorAll("img").forEach(function (image) {
+
+    image.addEventListener("error", function () {
+
+      image.style.display = "none";
+
+      const parent = image.parentElement;
+
+      if (parent) {
+        parent.classList.add("image-missing");
+      }
+
+    });
+
+  });
+
 });

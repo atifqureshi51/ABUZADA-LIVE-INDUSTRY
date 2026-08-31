@@ -1,28 +1,28 @@
-// ===============================
+// ================================
 // MOBILE MENU
-// ===============================
+// ================================
 
 function toggleMenu() {
-  const navMenu = document.getElementById("navMenu");
+  const nav = document.getElementById("navMenu");
 
-  if (navMenu) {
-    navMenu.classList.toggle("active");
+  if (nav) {
+    nav.classList.toggle("active");
   }
 }
 
 
-// ===============================
-// CLOSE MOBILE MENU AFTER CLICK
-// ===============================
+// Close mobile menu after clicking a link
 
-document.querySelectorAll("#navMenu a").forEach(function(link) {
+const navLinks = document.querySelectorAll("#navMenu a");
+
+navLinks.forEach(function(link) {
 
   link.addEventListener("click", function() {
 
-    const navMenu = document.getElementById("navMenu");
+    const nav = document.getElementById("navMenu");
 
-    if (navMenu) {
-      navMenu.classList.remove("active");
+    if (nav) {
+      nav.classList.remove("active");
     }
 
   });
@@ -30,52 +30,60 @@ document.querySelectorAll("#navMenu a").forEach(function(link) {
 });
 
 
-// ===============================
-// SMOOTH SCROLL
-// ===============================
+// ================================
+// CLOSE MENU WHEN CLICKING OUTSIDE
+// ================================
 
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+document.addEventListener("click", function(event) {
 
-  anchor.addEventListener("click", function(event) {
+  const nav = document.getElementById("navMenu");
+  const menuButton = document.querySelector(".menu-btn");
 
-    const targetId = this.getAttribute("href");
+  if (!nav || !menuButton) {
+    return;
+  }
 
-    if (!targetId || targetId === "#") {
-      return;
-    }
-
-    const target = document.querySelector(targetId);
-
-    if (target) {
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-    }
-
-  });
+  if (
+    nav.classList.contains("active") &&
+    !nav.contains(event.target) &&
+    !menuButton.contains(event.target)
+  ) {
+    nav.classList.remove("active");
+  }
 
 });
 
 
-// ===============================
-// CARD CLICK EFFECT
-// ===============================
+// ================================
+// SCROLL REVEAL
+// ================================
 
-document.querySelectorAll(".team-card, .platform-card").forEach(function(card) {
+const revealItems = document.querySelectorAll(
+  ".platform, .person-card, .requirement, .earnings-box"
+);
 
-  card.addEventListener("click", function() {
+const observer = new IntersectionObserver(
+  function(entries) {
 
-    card.style.transform = "scale(0.98)";
+    entries.forEach(function(entry) {
 
-    setTimeout(function() {
-      card.style.transform = "";
-    }, 120);
+      if (entry.isIntersecting) {
 
-  });
+        entry.target.classList.add("show");
 
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.12
+  }
+);
+
+revealItems.forEach(function(item) {
+  item.classList.add("reveal");
+  observer.observe(item);
 });

@@ -5,97 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>ABUZADA | Live Streaming Agency</title>
-  <meta name="description" content="ABUZADA Live Streaming Agency — Join Poppo Live and Crush Live.">
+
+  <meta
+    name="description"
+    content="ABUZADA Live Streaming Agency. Join Poppo Live and Crush Live and start your streaming journey."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- BACKGROUND EFFECTS -->
-  <div class="bg-orb orb-one"></div>
-  <div class="bg-orb orb-two"></div>
-  <div class="bg-grid"></div>
+  <!-- ================= NAVBAR ================= -->
 
-  <!-- NAVBAR -->
   <header class="navbar">
+
     <div class="container nav-inner">
 
-      <a href="#home" class="brand">
-        <span class="brand-mark">A</span>
-        <span>ABUZADA</span>
+      <a href="#home" class="logo">
+        ABU<span>ZADA</span>
       </a>
 
       <nav id="navMenu">
+
         <a href="#home">Home</a>
         <a href="#platforms">Platforms</a>
-        <a href="#team">Our Team</a>
+        <a href="#team">Team</a>
         <a href="#requirements">Requirements</a>
         <a href="#contact">Contact</a>
+
       </nav>
 
       <a
         href="https://wa.me/923430381018"
         target="_blank"
-        rel="noopener noreferrer"
         class="nav-apply"
       >
-        Apply Now <span>↗</span>
+        Apply Now
       </a>
 
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+      >
         ☰
       </button>
 
     </div>
+
   </header>
 
 
+  <!-- ================= HERO ================= -->
+
   <main>
 
-    <!-- HERO -->
     <section id="home" class="hero">
 
-      <div class="container hero-layout">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="orb orb-three"></div>
 
-        <div class="hero-copy">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
 
           <div class="live-badge">
             <span></span>
-            LIVE STREAMING AGENCY
+            WE ARE HIRING
           </div>
 
-          <h1>
-            Your Voice.
-            <br>
-            Your <em>Stage.</em>
-            <br>
-            Your Future.
-          </h1>
-
-          <p>
-            Build your live streaming career with
-            <strong>ABUZADA</strong>. Join our creator network
-            on Poppo Live and Crush Live.
+          <p class="small-title">
+            ABUZADA LIVE STREAMING AGENCY
           </p>
 
-          <div class="hero-actions">
+          <h1>
+            Your Presence.
+            <span>Your Career.</span>
+          </h1>
+
+          <p class="hero-text">
+            Build your audience, connect with people and grow your
+            live streaming career with our professional creator network.
+          </p>
+
+          <div class="hero-buttons">
 
             <a
               href="https://wa.me/923430381018?text=Hello%20ABUZADA%2C%20I%20want%20to%20join%20your%20agency."
               target="_blank"
-              rel="noopener noreferrer"
-              class="main-btn"
+              class="btn btn-main"
             >
-              <span>Join Our Agency</span>
+              Join Our Agency
               <b>→</b>
             </a>
 
-            <a href="#platforms" class="outline-btn">
+            <a
+              href="#platforms"
+              class="btn btn-outline"
+            >
               Explore Platforms
             </a>
 
@@ -123,52 +140,155 @@
         </div>
 
 
-        <!-- HERO VISUAL -->
-        <div class="hero-visual">
+        <div class="hero-card">
 
-          <div class="visual-ring ring-one"></div>
-          <div class="visual-ring ring-two"></div>
+          <div class="hero-card-glow"></div>
 
-          <div class="visual-card">
+          <div class="hero-card-top">
+            <span>LIVE CREATOR</span>
+            <i></i>
+          </div>
 
-            <div class="visual-top">
-              <span class="online-dot"></span>
-              CREATORS ARE LIVE
-              <span class="live-now">LIVE</span>
+          <div class="hero-avatar">
+            <div class="avatar-ring">
+              <span>AB</span>
+            </div>
+          </div>
+
+          <h3>
+            Start Your Journey
+          </h3>
+
+          <p>
+            Join our creator network and turn your time online
+            into an opportunity.
+          </p>
+
+          <div class="hero-card-bottom">
+            <span>Creator Network</span>
+            <strong>2026</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= PLATFORMS ================= -->
+
+    <section id="platforms" class="section">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <span>CHOOSE YOUR PLATFORM</span>
+
+          <h2>
+            Go Live.
+            <strong>Grow.</strong>
+          </h2>
+
+          <p>
+            Select a platform below and start your live streaming journey.
+          </p>
+
+        </div>
+
+
+        <div class="platforms-grid">
+
+
+          <!-- POPPO -->
+
+          <div class="platform-box poppo-box">
+
+            <div class="platform-image-wrap">
+
+              <img
+                src="poppo.jpg"
+                alt="Poppo Live"
+                class="platform-image"
+              >
+
+              <span class="platform-tag">
+                POPPO
+              </span>
+
             </div>
 
-            <div class="visual-center">
+            <div class="platform-content">
 
-              <div class="center-avatar">
-                <span>AB</span>
-              </div>
+              <span class="platform-label">
+                PLATFORM 01
+              </span>
 
-              <div class="sound-wave">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-              </div>
+              <h3>
+                Poppo Live
+              </h3>
 
-              <h3>Start Your Journey</h3>
+              <p>
+                Start streaming, meet your audience and build
+                your creator profile on Poppo Live.
+              </p>
 
-              <p>Connect • Stream • Grow</p>
+              <a
+                href="https://static.vshowapi.com/inviteNew/share/?c=poppo&link_id=10158346&user_id=67385762&temp_type=1&sys_temp_id=0"
+                target="_blank"
+                class="platform-link"
+              >
+                Join Poppo Live
+                <span>→</span>
+              </a>
 
             </div>
 
-            <div class="visual-bottom">
+          </div>
 
-              <div>
-                <small>AGENCY</small>
-                <strong>ABUZADA</strong>
-              </div>
 
-              <div class="verified">
-                ✓ VERIFIED
-              </div>
+          <!-- CRUSH -->
+
+          <div class="platform-box crush-box">
+
+            <div class="platform-image-wrap">
+
+              <img
+                src="crush.jpg"
+                alt="Crush Live"
+                class="platform-image"
+              >
+
+              <span class="platform-tag">
+                CRUSH
+              </span>
+
+            </div>
+
+            <div class="platform-content">
+
+              <span class="platform-label">
+                PLATFORM 02
+              </span>
+
+              <h3>
+                Crush Live
+              </h3>
+
+              <p>
+                Join our creator network and explore new opportunities
+                through live streaming.
+              </p>
+
+              <a
+                href="https://invite.nova2025linksys.com/invite?inviteCode=36879658&languages=en&inviterType=1&imageType=3"
+                target="_blank"
+                class="platform-link"
+              >
+                Join Crush Live
+                <span>→</span>
+              </a>
 
             </div>
 
@@ -181,112 +301,44 @@
     </section>
 
 
-    <!-- PLATFORMS -->
-    <section id="platforms" class="section">
+    <!-- ================= EARNINGS ================= -->
 
-      <div class="container">
+    <section class="earning-section">
 
-        <div class="section-intro">
+      <div class="container earning-card">
 
-          <span>CHOOSE YOUR STAGE</span>
+        <div class="earning-left">
+
+          <span>
+            GROW WITH US
+          </span>
 
           <h2>
-            Go Live.
-            <strong>Grow Fast.</strong>
+            Your potential
+            <strong>has no limit.</strong>
           </h2>
 
           <p>
-            Join one of our supported platforms and start
-            your creator journey today.
+            Earnings can vary according to activity, performance,
+            audience and platform conditions.
           </p>
 
         </div>
 
 
-        <div class="platforms">
+        <div class="earning-right">
 
-          <!-- POPPO -->
-          <article class="platform poppo">
+          <small>
+            POTENTIAL MONTHLY EARNINGS
+          </small>
 
-            <div class="platform-glow"></div>
+          <strong>
+            80K — 180K
+          </strong>
 
-            <div class="platform-header">
-
-              <div class="platform-logo">
-                P
-              </div>
-
-              <span class="platform-tag">
-                PLATFORM 01
-              </span>
-
-            </div>
-
-            <h3>Poppo Live</h3>
-
-            <p>
-              Stream, meet new people, interact with your
-              audience and build your creator profile.
-            </p>
-
-            <div class="platform-features">
-              <span>● Live Streaming</span>
-              <span>● Creator Growth</span>
-            </div>
-
-            <a
-              href="https://static.vshowapi.com/inviteNew/share/?c=poppo&link_id=10158346&user_id=67385762&temp_type=1&sys_temp_id=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="platform-link"
-            >
-              Join Poppo Live
-              <b>↗</b>
-            </a>
-
-          </article>
-
-
-          <!-- CRUSH -->
-          <article class="platform crush">
-
-            <div class="platform-glow"></div>
-
-            <div class="platform-header">
-
-              <div class="platform-logo">
-                C
-              </div>
-
-              <span class="platform-tag">
-                PLATFORM 02
-              </span>
-
-            </div>
-
-            <h3>Crush Live</h3>
-
-            <p>
-              Join our creator network and discover new
-              opportunities to grow your live career.
-            </p>
-
-            <div class="platform-features">
-              <span>● Live Streaming</span>
-              <span>● Creator Network</span>
-            </div>
-
-            <a
-              href="https://invite.nova2025linksys.com/invite?inviteCode=36879658&languages=en&inviterType=1&imageType=3"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="platform-link"
-            >
-              Join Crush Live
-              <b>↗</b>
-            </a>
-
-          </article>
+          <span>
+            PKR*
+          </span>
 
         </div>
 
@@ -295,53 +347,57 @@
     </section>
 
 
-    <!-- TEAM -->
+    <!-- ================= TEAM ================= -->
+
     <section id="team" class="section team-section">
 
       <div class="container">
 
-        <div class="section-intro">
+        <div class="section-head">
 
-          <span>MEET THE TEAM</span>
+          <span>OUR TEAM</span>
 
           <h2>
-            Here To Help You
-            <strong>Grow.</strong>
+            Meet The
+            <strong>Team.</strong>
           </h2>
 
           <p>
-            Contact our team directly on WhatsApp.
+            Contact our team directly through WhatsApp.
           </p>
 
         </div>
 
 
-        <div class="team-list">
+        <div class="team-grid">
 
 
           <!-- ABUZADA -->
+
           <a
             href="https://wa.me/923430381018"
             target="_blank"
-            rel="noopener noreferrer"
-            class="person-card owner"
+            class="team-card owner-card"
           >
 
             <div class="profile-photo">
+
               <img
                 src="abuzada.jpg"
                 alt="ABUZADA"
-                onerror="this.style.display='none';this.parentElement.classList.add('fallback');"
               >
-              <span class="fallback-letter">A</span>
-              <i></i>
+
+              <span class="online-dot"></span>
+
             </div>
 
-            <div class="person-info">
+            <div class="team-info">
 
-              <span class="role">AGENCY OWNER</span>
+              <span>AGENCY OWNER</span>
 
-              <h3>ABUZADA</h3>
+              <h3>
+                ABUZADA
+              </h3>
 
               <p>
                 Agency Owner
@@ -349,7 +405,7 @@
 
             </div>
 
-            <div class="person-arrow">
+            <div class="team-arrow">
               →
             </div>
 
@@ -357,28 +413,31 @@
 
 
           <!-- SNOW -->
+
           <a
             href="https://wa.me/923156690737"
             target="_blank"
-            rel="noopener noreferrer"
-            class="person-card assistant"
+            class="team-card snow-card"
           >
 
             <div class="profile-photo">
+
               <img
                 src="snow.jpg"
                 alt="SNOW"
-                onerror="this.style.display='none';this.parentElement.classList.add('fallback');"
               >
-              <span class="fallback-letter">S</span>
-              <i></i>
+
+              <span class="online-dot"></span>
+
             </div>
 
-            <div class="person-info">
+            <div class="team-info">
 
-              <span class="role">AGENCY ASSISTANT</span>
+              <span>AGENCY ASSISTANT</span>
 
-              <h3>SNOW</h3>
+              <h3>
+                SNOW
+              </h3>
 
               <p>
                 Agency Assistant
@@ -386,7 +445,7 @@
 
             </div>
 
-            <div class="person-arrow">
+            <div class="team-arrow">
               →
             </div>
 
@@ -394,28 +453,31 @@
 
 
           <!-- PETER -->
+
           <a
             href="https://wa.me/923171096089"
             target="_blank"
-            rel="noopener noreferrer"
-            class="person-card peter"
+            class="team-card peter-card"
           >
 
             <div class="profile-photo">
+
               <img
                 src="peter.jpg"
                 alt="PETER"
-                onerror="this.style.display='none';this.parentElement.classList.add('fallback');"
               >
-              <span class="fallback-letter">P</span>
-              <i></i>
+
+              <span class="online-dot"></span>
+
             </div>
 
-            <div class="person-info">
+            <div class="team-info">
 
-              <span class="role">AGENCY ASSISTANT</span>
+              <span>AGENCY ASSISTANT</span>
 
-              <h3>PETER</h3>
+              <h3>
+                PETER
+              </h3>
 
               <p>
                 Agency Assistant
@@ -423,7 +485,7 @@
 
             </div>
 
-            <div class="person-arrow">
+            <div class="team-arrow">
               →
             </div>
 
@@ -437,94 +499,78 @@
     </section>
 
 
-    <!-- EARNINGS -->
-    <section class="earnings">
+    <!-- ================= REQUIREMENTS ================= -->
+
+    <section id="requirements" class="section requirements-section">
 
       <div class="container">
 
-        <div class="earnings-box">
-
-          <div>
-
-            <span class="small-label">
-              YOUR POTENTIAL
-            </span>
-
-            <h2>
-              Turn Your Time Into
-              <strong>Opportunity.</strong>
-            </h2>
-
-            <p>
-              Earnings can vary based on activity, performance,
-              audience and platform conditions.
-            </p>
-
-          </div>
-
-          <div class="earning-display">
-
-            <small>
-              POTENTIAL MONTHLY
-            </small>
-
-            <strong>
-              80K — 180K
-            </strong>
-
-            <span>PKR*</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- REQUIREMENTS -->
-    <section id="requirements" class="section">
-
-      <div class="container">
-
-        <div class="section-intro center">
+        <div class="section-head center">
 
           <span>GET STARTED</span>
 
           <h2>
-            Ready When
-            <strong>You Are.</strong>
+            Simple
+            <strong>Requirements.</strong>
           </h2>
 
           <p>
-            A few basic things can help you start streaming comfortably.
+            Start with the basic setup and begin your streaming journey.
           </p>
 
         </div>
 
 
-        <div class="requirements">
+        <div class="requirements-grid">
 
-          <div class="requirement">
-            <div class="req-number">01</div>
-            <div class="req-icon">💡</div>
-            <h3>Good Lighting</h3>
-            <p>Use a ring light or suitable lighting for a clear stream.</p>
+          <div class="requirement-card">
+
+            <div class="requirement-icon">
+              💡
+            </div>
+
+            <h3>
+              Ring Light
+            </h3>
+
+            <p>
+              Good lighting helps create a clear and professional stream.
+            </p>
+
           </div>
 
-          <div class="requirement">
-            <div class="req-number">02</div>
-            <div class="req-icon">📶</div>
-            <h3>Stable Internet</h3>
-            <p>A reliable connection helps keep your live stream smooth.</p>
+
+          <div class="requirement-card">
+
+            <div class="requirement-icon">
+              📶
+            </div>
+
+            <h3>
+              Stable Internet
+            </h3>
+
+            <p>
+              A reliable connection is essential for smooth live streaming.
+            </p>
+
           </div>
 
-          <div class="requirement">
-            <div class="req-number">03</div>
-            <div class="req-icon">📱</div>
-            <h3>Suitable iPhone</h3>
-            <p>A suitable iPhone is required for your streaming setup.</p>
+
+          <div class="requirement-card">
+
+            <div class="requirement-icon">
+              📱
+            </div>
+
+            <h3>
+              iPhone
+            </h3>
+
+            <p>
+              A suitable iPhone is required for your live streaming setup.
+            </p>
+
           </div>
 
         </div>
@@ -534,36 +580,33 @@
     </section>
 
 
-    <!-- FINAL CTA -->
-    <section id="contact" class="final-cta">
+    <!-- ================= CONTACT ================= -->
 
-      <div class="container">
+    <section id="contact" class="contact-section">
 
-        <div class="cta-inner">
+      <div class="container contact-inner">
 
-          <span>READY TO START?</span>
-
-          <h2>
-            Your Stage
-            <br>
-            Is <strong>Waiting.</strong>
-          </h2>
-
-          <p>
-            Contact ABUZADA, SNOW or PETER and ask about
-            joining the agency.
-          </p>
-
-          <a
-            href="https://wa.me/923430381018"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-button"
-          >
-            Talk To Our Team →
-          </a>
-
+        <div class="contact-badge">
+          READY TO START?
         </div>
+
+        <h2>
+          Your New Journey
+          <span>Starts Here.</span>
+        </h2>
+
+        <p>
+          Choose a member of our team and contact us on WhatsApp.
+        </p>
+
+        <a
+          href="https://wa.me/923430381018"
+          target="_blank"
+          class="contact-main-btn"
+        >
+          Contact ABUZADA
+          <span>→</span>
+        </a>
 
       </div>
 
@@ -572,22 +615,25 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
     <div class="container footer-inner">
 
-      <a href="#home" class="brand">
-        <span class="brand-mark">A</span>
-        <span>ABUZADA</span>
-      </a>
+      <div class="logo">
+        ABU<span>ZADA</span>
+      </div>
 
       <p>
-        © 2026 ABUZADA Live Streaming Agency
+        © 2026 ABUZADA. All rights reserved.
       </p>
 
-      <a href="#contact">
-        Contact Team →
+      <a
+        href="https://wa.me/923430381018"
+        target="_blank"
+      >
+        WhatsApp
       </a>
 
     </div>

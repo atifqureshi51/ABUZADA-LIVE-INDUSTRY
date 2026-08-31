@@ -1,7 +1,3 @@
-// ================================
-// MOBILE MENU
-// ================================
-
 function toggleMenu() {
   const nav = document.getElementById("navMenu");
 
@@ -11,29 +7,19 @@ function toggleMenu() {
 }
 
 
-// Close mobile menu after clicking a link
-
-const navLinks = document.querySelectorAll("#navMenu a");
-
-navLinks.forEach(function(link) {
-
+// Mobile menu close after clicking a link
+document.querySelectorAll("#navMenu a").forEach(function(link) {
   link.addEventListener("click", function() {
-
     const nav = document.getElementById("navMenu");
 
     if (nav) {
       nav.classList.remove("active");
     }
-
   });
-
 });
 
 
-// ================================
-// CLOSE MENU WHEN CLICKING OUTSIDE
-// ================================
-
+// Close menu when clicking outside
 document.addEventListener("click", function(event) {
 
   const nav = document.getElementById("navMenu");
@@ -54,36 +40,9 @@ document.addEventListener("click", function(event) {
 });
 
 
-// ================================
-// SCROLL REVEAL
-// ================================
+// Smooth page loading
+document.addEventListener("DOMContentLoaded", function() {
 
-const revealItems = document.querySelectorAll(
-  ".platform, .person-card, .requirement, .earnings-box"
-);
+  document.body.classList.add("page-loaded");
 
-const observer = new IntersectionObserver(
-  function(entries) {
-
-    entries.forEach(function(entry) {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add("show");
-
-        observer.unobserve(entry.target);
-
-      }
-
-    });
-
-  },
-  {
-    threshold: 0.12
-  }
-);
-
-revealItems.forEach(function(item) {
-  item.classList.add("reveal");
-  observer.observe(item);
 });
